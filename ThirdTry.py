@@ -61,8 +61,115 @@
 # except:
 #     print("Numbrid!!!")
 
-x=17
-y=23
-y=x+y+1
-x=x+y
-print(f"answer {x}")
+#4
+try:
+    hind=float(input("Hind: "))
+    if hind >= 700:
+        HS=hind-(hind*0.3)
+        print(f"Hind soodustusega: {round(HS,2)}")
+    else:
+        print(f"Hind on sooduseta: {hind}")
+except:
+    print("Sul on viga sisestamisel")
+
+#5
+try:
+    temp=float(input("Sisesta temperatuuri: "))
+    if temp >=18:
+        print("Sobiv toasoojus")
+    else:
+        print("Temperatuur on alla 18 kraadi")
+except:
+    print("Sul on viga sisestamisel")
+
+#6
+try:
+    pikkus=float(input("Mis on sinu pikkus(sm) ? "))
+    if pikkus <=130:
+        print("Sina oled madala kasvu")
+    elif pikkus <=180:
+        print("Sina oled keskmist kasvu")
+    elif pikkus <=250:
+        print("Sina oled pikka kasvu")
+    else:
+        print("Kas sa oled kindel?")
+except:
+    print("Sul on viga sisestamisel")
+
+#7
+try:
+    sugu=input("Kas sa oled naine (N) või mees (M)?")
+    if sugu.upper()=="N":
+        pikkus=float(input("Kui pikk sa oled?"))
+        if pikkus <=125:
+            print("Sina oled madala kasvu")
+        elif pikkus <=150:
+            print("Sina oled keskmist kasvu")
+        elif pikkus <=250:
+            print("Sina oled pikka kasvu")
+        else:
+            print("Kas sa oled kindel?")
+    elif sugu.upper()=="M":
+        pikkus=float(input("Kui pikk sa oled?"))
+        if pikkus <=125:
+            print("Sina oled madala kasvu")
+        elif pikkus <=150:
+            print("Sina oled keskmist kasvu")
+        elif pikkus <=250:
+            print("Sina oled pikka kasvu")
+        else:
+            print("Kas sa oled kindel?")
+    else:
+        print("Sisesta õigesti: Kas N või M")
+except:
+    print("Midagi läks valesti")
+
+#8
+
+#9
+a=float(input("Sisesta külg a: "))
+b=float(input("Sisesta külg b: "))
+if a==b:
+    print("See on ruut")
+else:
+    print("See on ristkülik")
+
+#10
+a=float(input("Sisesta arv a: "))
+b=float(input("Sisesta arv b: "))
+vastus=input("Kas soovid + või -: ")
+try:
+    if vastus=="-":
+        c=float(a-b)
+        print(f"{a}-{b}={c}")
+    elif vastus=="+":
+        c=float(a+b)
+        print(f"{a}+{b}={round(c,2)}")
+except:
+    print("Vastus peab olema + või -")
+
+#11
+
+#12
+hind=float(input("Sisesta toote hinna: "))
+if hind<0:
+    print("Hind peab olema rohkem kui 0")
+elif 0<hind<10:
+    print(f"Saate 10% soodustust. Maksmisele: {hind-(hind*0.1)}")
+elif hind>10:
+    print(f"Saate 20% soodustust. Maksmisele: {hind-(hind*0.2)}")
+else:
+    print("Midgi läks valesti")
+
+#13
+sugu=input("Kas sa oled naine (N) või mees (M)? ")
+if sugu.upper()=="N":
+    print("Kahjuks naised meeskonnas ei osale")
+elif sugu.upper()=="M":
+    vanus=int(input("Kui vana sa oled? "))
+    if 16<=vanus<=18:
+        print("Oled sobiv kandideerija")
+    else:
+        print("Kahjuks meil on vanuse piirang")
+else:
+    print("Kirjuta, kas M või N")
